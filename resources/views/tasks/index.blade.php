@@ -9,7 +9,7 @@
     @include('common.errors')
 
     <!-- Форма новой задачи -->
-    <form action="{{ url('tasks') }}" method="POST" class="form-horizontal">
+    <form action="{{ url(route('tasks.store')) }}" method="POST" class="form-horizontal">
       {{ csrf_field() }}
 
       <!-- Имя задачи -->
