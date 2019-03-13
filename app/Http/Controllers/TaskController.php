@@ -11,11 +11,14 @@ class TaskController extends Controller
     public function __construct() {
 	$this->middleware('auth');
     }
-    public function index() {
-	return view ('tasks.index');
+    public function index(Request $request) {
+	$tasks = $request->user()->tasks()->get();
+		return view ('tasks.index', [
+		    'tasks'=>$tasks,
+		]);
     }
     public function create() {
-	
+		return view ('tasks.create');
     }
     public function store(Request $request) {
 	$this->validate($request, [
