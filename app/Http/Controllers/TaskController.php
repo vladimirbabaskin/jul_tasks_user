@@ -17,8 +17,11 @@ class TaskController extends Controller
     public function create() {
 	
     }
-    public function store() {
-	
+    public function store(Request $request) {
+	$this->validate($request, [
+	    'name'=>'required|max:255',
+	]);
+	echo $request->name;
     }
     public function show() {
 	
