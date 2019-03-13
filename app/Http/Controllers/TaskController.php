@@ -12,7 +12,7 @@ class TaskController extends Controller
 	$this->middleware('auth');
     }
     public function index() {
-	echo 'all tasks';
+	return view ('tasks.index');
     }
     public function create() {
 	
