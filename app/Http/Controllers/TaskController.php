@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Task;
 
 class TaskController extends Controller
 {
@@ -39,7 +40,7 @@ class TaskController extends Controller
     public function update() {
 	
     }
-    public function destroy() {
-	
+    public function destroy(Request $request, Task $task) {
+	var_dump($task->id);
     }
 }
