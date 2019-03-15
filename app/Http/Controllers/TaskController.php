@@ -41,6 +41,8 @@ class TaskController extends Controller
 	
     }
     public function destroy(Request $request, Task $task) {
-	var_dump($task->id);
+	      $this->authorize('destroy', $task);
+	      $task->delete();
+	      return redirect()->route('tasks.index');
     }
 }
