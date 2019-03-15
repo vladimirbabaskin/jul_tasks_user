@@ -43,6 +43,16 @@
 			    </button>
 			</form>
 		    </td>
+		    <td>
+			<!-- TODO: Кнопка Редактировать -->
+			<form action="{{ route('tasks.edit', $task->id) }}" method="GET">
+			    {{ csrf_field() }}
+			    {{ method_field('EDIT') }}
+			    <button type="submit" class="btn btn-danger">
+				<i class="fa fa-btn fa-trash"></i>Редактировать
+			    </button>
+			</form>
+		    </td>
 		</tr>
 		@endforeach
 	    </tbody>
