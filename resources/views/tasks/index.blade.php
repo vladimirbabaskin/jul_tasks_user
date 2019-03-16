@@ -5,7 +5,7 @@
 <!-- Bootstrap шаблон... -->
 <div class="panel-body">
     <a href="{{route('tasks.create')}}" class="btn btn-default">
-	<i class="fa fa-plus"></i> Hовая задача
+	<i class="fa fa-plus"></i> Новая задача
     </a>
 </div>
 <h2>Текущие задачи</h2> 
